@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import React from 'react';
@@ -7,6 +7,8 @@ import doctor from '../../../images/doctor.png';
 
 const appointmentBanner = {
   background: `url(${bg})`,
+  backgroundColor: 'rgba(47, 59, 75, .9 )',
+  backgroundBlendMode: 'darken, luminosity',
   marginTop: 150,
 };
 
@@ -22,8 +24,49 @@ const AppointmentBanner = () => {
               alt=""
             />
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h6">Appointment</Typography>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: 'flex',
+              justifyContent: 'flex-start',
+              alignItems: 'center',
+              textAlign: 'left',
+            }}
+          >
+            <Box>
+              <Typography
+                variant="h6"
+                sx={{ mb: 5 }}
+                style={{ color: '#52DEDB' }}
+              >
+                {' '}
+                Appointment{' '}
+              </Typography>
+              <Typography
+                variant="h4"
+                sx={{ my: 5 }}
+                style={{ color: 'white' }}
+              >
+                Make an Appointment Today
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{ my: 5 }}
+                style={{ color: 'white', fontSize: 14, fontWeight: 300 }}
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt, repudiandae odio placeat quod unde facilis gdhg emi
+                nai abind all!
+              </Typography>
+              <Button
+                variant="contained"
+                style={{ backgroundColor: '#52DEDB' }}
+              >
+                Learn More
+              </Button>
+            </Box>
           </Grid>
         </Grid>
       </Box>
