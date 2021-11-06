@@ -1,5 +1,6 @@
 import { Button, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import login from '../../../images/login.png';
 
 const Login = () => {
@@ -30,6 +31,7 @@ const Login = () => {
               id="standard-basic"
               label="Your Email"
               name="email"
+              type="email"
               onChange={handleOnChange}
               variant="standard"
             />
@@ -50,6 +52,11 @@ const Login = () => {
               {' '}
               Login
             </Button>
+            <NavLink style={{ textDecoration: 'none' }} to="/register">
+              <Button sx={{ width: 'auto', m: 1 }} type="submit" variant="text">
+                NEW USER? PLEASE REGISTER
+              </Button>
+            </NavLink>
           </form>
         </Grid>
         <Grid item xs={4} md={6}>
